@@ -1,5 +1,3 @@
-const executeInterval = 200
-
 const virtualScroll = !!document.querySelector("#virtual-note-list-id")
 let scrollArea = document.querySelector("#virtual-note-list-id") || document.querySelector("#note-list-block")
 
@@ -63,7 +61,7 @@ function downloadNotes(startName, endName) {
 
     (function (k) {
       setTimeout(() => {
-        const exportBtn = document.querySelector('.v-contextmenu>div>li.v-contextmenu-submenu li:nth-child(3)')
+        const exportBtn = document.querySelector('.vivo-dropdown-submenu li:nth-child(3)')
         exportBtn.click()
         console.log("exportBtnClicked", noteName)
       }, k * executeInterval)
@@ -103,6 +101,7 @@ function downloadNotes(startName, endName) {
   k++
 }
 
+const executeInterval = 200
 const startName = "10月31日"
 const endName = ""
 downloadNotes(startName, endName)
